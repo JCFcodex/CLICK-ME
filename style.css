@@ -1,0 +1,95 @@
+/* This file is not mine; I just made some enhancements to the code. I added a timer and changed the button's color. */
+/* CREDITS TO THE OWNER */
+
+html,
+body {
+  background-color: rgb(240, 229, 205);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+}
+
+button {
+  display: block;
+  padding: 0.75rem 1.25rem;
+  border: 0;
+  border-radius: 4px;
+  background-color: hsl(218, 92%, 57%);
+  color: #fff;
+  user-select: none;
+  font-size: 1rem;
+  transform-style: preserve-3d;
+  position: relative;
+  transition: all 0.1s ease;
+
+  cursor: pointer;
+}
+
+button:before,
+button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 4px;
+  background-color: hsl(0, 0%, 94%);
+  transform: translateZ(-5px);
+}
+
+button:after {
+  background-color: hsl(218, 92%, 20%);
+  transform: translateZ(-10px);
+}
+
+.button-wrapper {
+  position: relative;
+  perspective: 400px;
+  align-self: flex-start;
+}
+
+header {
+  width: 100%;
+  margin: 0 0 2rem 0;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #888;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.timer {
+  position: absolute;
+  top: 13rem;
+  font-size: 1rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+#restart {
+  color: hsl(218, 92%, 57%);
+  font-weight: 600;
+}
